@@ -1,16 +1,20 @@
 package com.practica.controller;
 
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+
+@Slf4j
 @Controller
 public class indexController {
 
 
-    @GetMapping("/index")
-    public String indexController(Model model){
+    @GetMapping("/")
+    public String index(Model model){
+        log.info("estas en index controller");
         return "index";
     }
 }
